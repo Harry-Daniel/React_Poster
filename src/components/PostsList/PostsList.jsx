@@ -25,11 +25,12 @@ function PostsList({isPosting, onStopPosting}) {
         <NewPost
           onBodyChange={bodyChangeHandler}
           onAuthorChange={onAuthorChange}
+          onCancel={onStopPosting}
         />
       </Modal> }
       
       <ul className={styles.posts}>
-        <Post author={enteredAuthor} body={enteredBody} />
+        <Post author='Mawuko' body='Something' />
         <Post author="Senyo" body="Check out the full course!" />
       </ul>
     </div>
