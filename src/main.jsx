@@ -5,11 +5,13 @@ import Posts, {loader as postsLoader} from "./routes/Posts";
 import NewPost, {action as newPostAction} from "./routes/NewPost/NewPost";
 import RootLayout from "./routes/RootLayout";
 import "./index.css";
+import Error from "./routes/ErrorPage/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <Error/>,
     children: [
       {
         path: "/",
