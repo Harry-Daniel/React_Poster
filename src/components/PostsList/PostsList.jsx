@@ -6,6 +6,9 @@ import styles from "./PostsList.module.css";
 
 function PostsList() {
   const data = useLoaderData();
+  // if (data.isError){
+  //   return <p>{data.message}</p>
+  // }
   const posts = data.posts;
 
   return (
