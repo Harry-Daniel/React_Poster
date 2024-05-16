@@ -6,6 +6,7 @@ import NewPost, {action as newPostAction} from "./routes/NewPost/NewPost";
 import RootLayout from "./routes/RootLayout";
 import "./index.css";
 import Error from "./routes/ErrorPage/Error";
+import PostDetails, {loader as postDetailsLoader} from "./routes/PostDetails/PostDetails";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,9 @@ const router = createBrowserRouter([
         path: "/",
         element: <Posts />,
         loader:postsLoader,
-        children: [{ path: "/create-post", element: <NewPost />, action: newPostAction}],
+        children: [{ path: "/create-post", element: <NewPost />, action: newPostAction},
+        {path: '/:id' , element: <PostDetails/>, loader: postDetailsLoader}
+      ],
       },
     ],
   },
