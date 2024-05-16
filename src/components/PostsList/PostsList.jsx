@@ -5,7 +5,8 @@ import Post from "../../Post/Post";
 import styles from "./PostsList.module.css";
 
 function PostsList() {
-  const posts = useLoaderData();
+  const data = useLoaderData();
+  const posts = data.posts;
 
   return (
     <div>
